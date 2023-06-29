@@ -1,0 +1,27 @@
+Certainly! Here's a list of common data science subjects that are relevant to data analytics studies:
+
+Descriptive Statistics: Descriptive statistics involves summarizing and describing the main features of a dataset, such as measures of central tendency (mean, median, mode), measures of dispersion (variance, standard deviation), and graphical representations (histograms, box plots).
+
+Correlation Analysis: Correlation analysis examines the relationship between two or more variables in a dataset to determine if there is a statistical association between them. It helps identify the strength and direction of the relationship using correlation coefficients like Pearson's correlation coefficient.
+
+Outlier Detection: Outliers are data points that significantly deviate from the rest of the dataset. Outlier detection techniques help identify and handle these anomalies, as they can have a substantial impact on statistical analysis and modeling.
+
+Data Cleaning and Preprocessing: Data cleaning and preprocessing involve handling missing values, dealing with inconsistent or incorrect data, standardizing data formats, and transforming data into a suitable format for analysis.
+
+Exploratory Data Analysis (EDA): EDA is an approach to analyzing data sets to summarize their main characteristics, often through visualization techniques. It involves identifying patterns, trends, and relationships in the data to gain insights and inform further analysis.
+
+Statistical Hypothesis Testing: Hypothesis testing allows you to make inferences about a population based on a sample. It involves formulating null and alternative hypotheses, selecting an appropriate statistical test (e.g., t-test, chi-square test), and interpreting the results to draw conclusions.
+
+Regression Analysis: Regression analysis is used to model and analyze the relationship between a dependent variable and one or more independent variables. It helps understand how the independent variables impact the dependent variable and make predictions based on the learned relationship.
+
+Time Series Analysis: Time series analysis deals with data collected over time, focusing on patterns, trends, and seasonality. Techniques such as autoregressive integrated moving average (ARIMA) models, exponential smoothing, and trend analysis are used for forecasting and understanding temporal data.
+
+Data Visualization: Data visualization involves creating visual representations of data to facilitate understanding, exploration, and communication. Effective visualization techniques can reveal patterns, trends, and outliers in the data.
+
+Dimensionality Reduction: Dimensionality reduction techniques help reduce the number of features (variables) in a dataset while preserving essential information. Principal Component Analysis (PCA) and t-SNE (t-Distributed Stochastic Neighbor Embedding) are common dimensionality reduction methods.
+
+Cluster Analysis: Cluster analysis is used to group similar data points together based on their characteristics or similarities. It helps identify underlying structures and patterns within the data.
+
+Text Mining and Natural Language Processing (NLP): Text mining and NLP techniques enable the analysis and understanding of text data, including sentiment analysis, topic modeling, and text classification.
+
+Please note that this is not an exhaustive list, and data analytics encompasses a broad range of topics. Different programs and courses may cover additional subjects or focus more specifically on certain areas within data analytics.
