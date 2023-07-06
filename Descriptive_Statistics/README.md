@@ -1,32 +1,68 @@
-# Descriptive Analysis
-This project focuses on performing descriptive analysis on stock price data. We will be using the yfinance library to retrieve historical stock prices and analyze various aspects of the data.
+# Descriptive Analysis for Stock Price
+This project focuses on conducting descriptive analysis for stock price data. Various statistical measures and visualizations are used to gain insights into the behavior and characteristics of the stock price.
 
-## Getting Started
-To run this project, you will need to install the following dependencies:
+## Libraries
+The following libraries are used in this project:
 
-yfinance
-pandas
-plotly.express
-scipy
-statsmodels.api
-numpy
-matplotlib.pyplot
-You can install these dependencies using pip:
+yfinance: For downloading stock price data.
 
-## Data Collection
-The first step is to retrieve the historical stock price data using the yfinance library. You will be prompted to enter the ticker symbol of the stock and the start and end dates for the data. For example:
+pandas: For data manipulation and analysis.
+
+plotly.express: For interactive data visualization.
+
+scipy.stats: For statistical functions.
+
+statsmodels.api: For statistical modeling.
+
+numpy: For numerical computations.
+
+matplotlib.pyplot: For data visualization.
+
+mplfinance: For plotting candlestick charts.
+
+## Input
+You will be prompted to enter the stock ticker symbol and the start and end dates for the data. The yfinance library is used to download the historical stock price data.
 
 ## Data Visualization
-We will use various visualization techniques to gain insights into the stock price data. The plotly.express and matplotlib.pyplot libraries will be used to create visualizations such as line plots, scatter plots, and bar plots.
+The project includes several visualizations of the stock price data:
 
-## Support and Resistance Levels
-We will identify support and resistance levels in the stock price data. Support levels represent the price level at which the stock tends to stop falling and start rising, while resistance levels represent the price level at which the stock tends to stop rising and start falling.
+Line Plot: A line plot of the adjusted closing price over time.
 
-The project will identify local minima as support levels and local maxima as resistance levels. These levels will be plotted on a line plot to visualize their positions in the stock price data.
+Candlestick Chart: A candlestick chart that shows the open, high, low, and close prices for each day.
 
-## Conclusion
-Descriptive analysis provides valuable insights into stock price data by analyzing various aspects of the data. This project aims to demonstrate the application of descriptive analysis techniques on stock price data, including data visualization and identification of support and resistance levels.
+Close and Volume Plot: A combination plot showing the closing price and volume.
 
-Feel free to explore the provided code and modify it according to your requirements. Have fun analyzing and gaining insights from stock price data!
+Histogram: A histogram plot showing the distribution of daily returns.
 
-Note: The analysis provided in this project is for educational purposes only and should not be considered as financial advice.
+Accumulated Returns: A line plot showing the accumulated returns over time.
+
+## Preprocessing
+The data is preprocessed to calculate additional columns:
+
+Percentage Change: The percentage change in the adjusted closing price from the previous day.
+
+Rolling Means: The rolling mean of the daily returns using different window sizes.
+
+Volatility: The rolling standard deviation of the daily returns using different window sizes.
+
+## Descriptive Statistics
+
+Various descriptive statistics are calculated:
+
+Mean: The average daily return.
+
+Median: The median daily return.
+
+Standard Deviation: The measure of the spread or volatility of the daily returns.
+
+Minimum and Maximum: The minimum and maximum daily returns.
+
+Quartiles: The first, second (median), and third quartiles of the daily returns.
+
+## Data Distribution
+The distribution of daily returns is visualized using a histogram.
+
+## Accumulated Returns
+The accumulated returns over time are calculated and plotted.
+
+Feel free to explore the provided code and modify it according to your requirements. Have fun performing descriptive analysis on stock price data!
