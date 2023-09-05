@@ -6,16 +6,13 @@ import matplotlib.pyplot as plt
 import mplfinance as mpf
 from datetime import datetime
 
-# Streamlit configuration
 st.set_page_config(layout="wide")
 
-# Function to download stock data
 def download_stock_data(ticker, start_date):
     end_date = datetime.today().strftime('%Y-%m-%d')
     data_downloaded = yf.download(ticker, start=start_date, end=end_date)
     return data_downloaded
 
-# Function to preprocess data and plot the chart
 def preprocess_and_plot(data):
     # Calculate additional indicators
     data["Returns"] = round((data["Adj Close"].pct_change()) * 100, 2)
@@ -42,7 +39,6 @@ def preprocess_and_plot(data):
     data['LowerBB'] = round(data['SMA20'] - (data['StdDev'] * 2), 2)
     data = data.dropna()
 
-    # Plot OHLC chart with indicators
     ohlc_data = data[['Open', 'High', 'Low', 'Close']]
     apds = [
         mpf.make_addplot(data['EMA8'], color='blue'),
@@ -59,33 +55,23 @@ def preprocess_and_plot(data):
     fig, axes = mpf.plot(ohlc_data, type='candle', style='yahoo', title='OHLC Chart with Indicators', ylabel='Price',
                          addplot=apds, returnfig=True)
 
-    # Customize the plot
     axes[0].grid(True)
     axes[1].grid(True)
     axes[2].grid(True)
 
-    # Show the plot
     st.pyplot(fig)
 
-# Main Streamlit app
 def main():
-    # App title
     st.title("Stock OHLC Chart with Indicators")
-
-    # User input for stock ticker and start date
     ticker = st.text_input("Enter the stock ticker (e.g., AAPL):")
     start_date = st.text_input("Enter a start date (e.g., 2010-01-01):")
 
     if ticker and start_date:
         try:
-            # Download stock data
             data_downloaded = download_stock_data(ticker, start_date)
 
             if not data_downloaded.empty:
-                # Preprocess data and plot the chart
                 preprocess_and_plot(data_downloaded)
-
-                # Display the data table
                 st.subheader("Stock Data")
                 st.dataframe(data_downloaded)
 
@@ -98,6 +84,5 @@ def main():
     else:
         st.info("Please enter the stock ticker and start date.")
 
-# Run the app
 if __name__ == '__main__':
     main()
